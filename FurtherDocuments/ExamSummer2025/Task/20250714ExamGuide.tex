@@ -1,0 +1,342 @@
+\documentclass[10pt, a4paper]{article}
+\newcommand{\DocData}{\today}%
+\usepackage[pdftex]{graphicx}
+\usepackage{a4}%
+\usepackage{courier}%                   % \ttdefault: Adobe Courier
+%\usepackage[scaled=.92]{helvet}         % \sfdefault: Adobe Helvetica
+%\renewcommand\familydefault{phv}
+\setlength{\paperwidth}{210mm}
+\setlength{\paperheight}{297mm}%
+    \textwidth=16cm%
+    \textheight=23cm%
+    \oddsidemargin=0.0cm%
+    \evensidemargin=0.0cm%
+\parindent=0mm
+\usepackage{color}
+\definecolor{mygrey}{rgb}{0.7,0.7,0.7}
+\definecolor{mylightgrey}{rgb}{0.7,0.7,0.7}
+%\definecolor{mygrey}{rgb}{0.148,0.180,0.383}
+%\definecolor{mylightgrey}{rgb}{0.148,0.180,0.383}
+\definecolor{mybgcolor}{rgb}{0.07,0.09,0.190}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % delete current header and footer
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{{\LARGE \sc Exam August  2025} }
+\fancyhead[RE]{\bfseries\leftmark}
+%\fancyfoot[LE,RO]{Confidential}
+\fancyfoot[LE,RO]{\tiny File:\jobname.tex}
+\fancyfoot[LO]{Confidential}
+\fancyfoot[RE]{Confidential}
+\newcommand{\mkeinbildxx}[2]{
+\begin{center}\setlength{\fboxrule}{0.0075\textwidth}\fcolorbox{mygrey}{mylightgrey}{\includegraphics[width=#1\textwidth]{#2}}\end{center}}
+\newcommand{\mkeinbild}[1]{                    
+                    \mkeinbildxx{0.95}{./../scans/#1}
+%\vspace*{2mm}
+}
+\newcommand{\mkeinbildy}[1]{                    
+                    \mkeinbildxx{0.95}{./../scans2/#1}
+%\vspace*{2mm}
+}
+\newcommand{\mkeinbildyy}[2]{
+\begin{center}\setlength{\fboxrule}{0.0075\textwidth}\fcolorbox{mygrey}{mylightgrey}{\includegraphics[width=#1\textwidth]{./../scans2/#2}}\end{center}}
+\usepackage[final]{pdfpages}
+ \usepackage{xspace,inputenc}
+ \usepackage{mathptmx}%
+\usepackage[pdftex,
+            colorlinks=true,            % Schrift von Links in Farbe (true), sonst mit Rahmen (false)
+            bookmarksnumbered=true,     % Lesezeichen im pdf mit Nummerierung
+            bookmarksopen=true,         % Ãffnet die Lesezeichen vom pdf beim Start
+            bookmarksopenlevel=0,       % Default ist maxdim
+            pdfstartview=FitH,          % startet mit Seitenbreite
+            linkcolor=blue,             % Standard 'red'
+            citecolor=blue,             % Standard 'green'
+            urlcolor=blue,              % Standard 'cyan'
+            filecolor=blue,             %
+            plainpages=false,pdfpagelabels]{hyperref} %
+
+\begin{document}
+\title{Exam August 2025}
+\author{Michael Koller}
+\date{\today}
+\maketitle
+\tableofcontents
+
+%\section{NEW}
+%Please find below the email addresses to which the presentations have to be sent (to all of them):
+
+%\begin{itemize}
+%\item michael.koller@bluemail.ch
+%\item TBD
+%\end{itemize}
+
+{\bf NOTE: For avoidance of doubt. This is a exam in person in the room allocated in your individual schedule.}
+
+\section{Aim}
+The aim of this document is to provide guidance for the upcoming exams and the respective preparations needs. It is expected that each student prepares the respective tasks themselves and does in particular not copy from other students. The usual plagiarism requirements are to be strictly adhered to  and violations have corresponding consequences as outlined in the various guidelines of ETHZ.
+
+The following paragraph answers the table in the student guide (section \ref{SG}):
+
+We note that all material can be found on the git-hub used in the lecture, ie https://github.com/michaeldfkoller/lv12
+
+\begin{description}
+\item[Date, time, and duration;] As per students portal on 14/15.8.2025
+\item[Allowed aids (books, notes, calculators, data tables, etc.;] No restrictions - open book exam; use of AI tools need to be disclosed in the presentation. Note time limit as per exam schedule applies
+\item [An email address] or uploading functionality to transfer an electronic copy of your written notes, if so desired: {\bf The primary email address is mikoller@ethz.ch. The presentation for the task needs to be sent at least 24h prior to the exam. As soon as the assistant for the exam is known I will send you the respective email also, and the task is to be sent to both email addresses}
+\item[Whether or not you ] will also be required to use postal mail to send your written notes to ETH (and the address to do so): Electronic in pdf format to me and the teaching assistant is sufficient.
+\item[Two independent ways of contacting] the examiners in case of problems, including phone/SMS: {\bf The two emails of me and the teaching assistant plus my phone +447826943343. Note it will be difficult to phone me during an exam before the scheduled time, hence I suggest an sms, what's app etc.}
+%\item[If the exam will be recorded;] if so, the examiner will ask for your consent via e-mail and inform you who; has access to the recording for what purpose, and where and how long it is stored. {\bf For efficiency reasons it would be good to record the exams since it gives certainty to both sides. If you DO NOT want the exam to be recorded, please send an email to me and the teaching assistant beforehand AND mention it again at the start of the exam. Note the recording will be kept solely at ETH and I will not have a copy. Storing follows the usual retention policy for oral and written exams of ETHZ.}
+\item[ And any other exam guidelines] that require preparation on your part: See below
+\end{description}
+
+\section{Process}
+\begin{enumerate}
+\item I will send you these instructions at least one week before your exam. If you have high level questions please send them to me until one week before the exam date. I will try to answer them if deemed sensible and update this paper.
+\item You prepare the below allocated task and send a presentation to me and the teaching assistant at least  24h before the actual exam. 
+Late submission might lead to penalties. The expected file format is pdf. You can share your workings as *.py or as a Jupyter notebook.
+\item On the day of exam you will present you findings and will be questioned correspondingly. Hence the exam is a mix between an expert discussion and theoretical questions according to the course. It is expected that the student shares his screen for the parts he is presenting. You do need to bring a printed copy of the exam, but if you want to present you need to bring your lap-top etc.
+\item This year the questions will be distributed earlier. Process wise adhere to the following two: a) do not send questions until two weeks before the exam, and b) send your presentation not earlier than one week before the exam.
+\end{enumerate}
+
+\subsection{What is expected?}
+
+The aim of the expert discussion is to show to me you ability to apply the theory (and to prove certain parts of it) based on concrete questions. What is of utmost importance is the clarity of thought. You will be asked to define and use certain models to answer the questions below. I would follow the following grid:
+\begin{itemize}
+\item Why did I use the model I am presenting. What are the implicit and explicit assumptions I have made and which modelling risks are induced from it. If guidance is missing, please also document which additional assumptions were taken and why?
+\item What is the basis of the model and why is the model adequate for the question
+\item Which parameters have I chosen and why. (Note I will give you some parameters, but you might need to tweak and amend them, If a certain parameter can not be determined exactly please make a sensible assumption. You can use all mortality tables etc from the course.
+\item What are the main finding of your analysis and what consequences do you draw.
+\end{itemize}
+Please note that your presentations should be adequately concise since we need to cover as much ground as possible - if you are not sure put a respective explanatory slide in the appendix which can be discussed if needed. Your mark will be determined based on a) the quality of the presentation b) The solution of the problem and c) The oral discussions and the theoretical questions. I expect that all the tasks are addressed in the presentation but I might focus during the oral part on one or two of them only.
+ %==============BEGIN MUT
+
+\section{Tasks for Preparation}
+\subsection{Task 1: Markov Model (Theoretical Part):}
+Note: If you are doing the exam for Selected Chapters I obviously expect from you also the time-continuous versions addressed.
+\begin{itemize}
+\item Definition of a Markov chain and Chapman-Kolmogorov 
+\item Model per se, induced cash flows
+\item Calculation of Cash flows, including the respective calculations and proofs
+\item Thiele Equation
+\item How would you do a decomposition of the premium into risk and savings part? How would you do a technical analysis? Note this was not explicitely covered in the lecture but was covered in the classical case. You might want to consult also chapter 10 of ram\_sp.pdf
+\end{itemize}
+
+\subsection{Task 2: Stopping to pay premium:}
+
+The aim of this task is to analyse the effect of policyholder paying premium.  We consider the following policy and want to see what happens in the policyholder stops premium payment. For students taking Life Insurance Mathematics the question will focus what this means re equivalence principle and how benefits accumulate over time and for students taking selected chapters the question centre both around ALM; risk minimising portfolios and bonus strategies. The details will be provided as per below.
+
+{\bf Product}
+\begin{itemize}
+\item We consider a mixed endowment ($A_{x:n}$).
+\item $x=80$ and $n=10$, hence maturing at the age of 90.
+\item Technical interest rate $i_T=2\%$ with prevailing market rate of $i=4\%$.
+\item Benefit level $L=100000$, Premium to be determined by mean of {\em equivalence principle} at inception wrt $i_T$.
+\item Mortality given by 
+\begin{verbatim}
+def Qx(gender,x,t,param =[]):
+    # This is our default mortality
+    if gender == 0:
+        a =[2.34544649e+01,8.70547812e-02,7.50884047e-05,-1.67917935e-02]
+    else:
+        a =[2.66163571e+01,8.60317509e-02,2.56738012e-04,-1.91632675e-02]
+    return(np.exp(a[0]+(a[1]+a[2]*x)*x+a[3]*t))
+\end{verbatim}
+{\bf Note we set $t=2020$ for all ages to ensure comparable results!}
+\item The policyholder is a man.
+\item Premium are paid 1/1 prenumerando.
+\end{itemize}
+
+{\bf Mechanism of stopping to pay premium}
+A typical insurance policy allows the policyholder to top paying premium after having paid premium at every point in time. Hence in extremis the policyholder can only pay one premium over the whole policy term. In case a policyholder stops paying premium the policy is in the state "Premium Free" and the future benefits will be reduced by means of actuarial principles: The mathematical reserve at this point in time is taken as a single premium resulting in lower benefits going forwards. Example: Assume we have a benefit $L$ and a premium $P$ at inception. Assume the policyholder stops paying premium at $t=2$, ie does not pay premium at time 2 (3rd premium). In such case:
+\begin{itemize}
+\item He is protected to the full extent between times $[0,2[$, and
+\item The benefit is reduced thereafter to $\tilde{L}$ with nil premium, and
+\item $\tilde{L} = \frac{{}_2V_x}{A_{x+2:n-2}}$.
+\end{itemize}
+
+{\bf Questions}
+\begin{enumerate}
+\item Calculate the premium for product at inception (Students: {\bf all}).
+\item Calculate the Benefit $\tilde{L}$ if the policyholder stops after one premium (Students: {\bf all}).
+\item Calculate the Benefit Level as a function of the number of premium paid (Students: {\bf LV}).
+\item Which equivalence principle is fulfilled for the first premium assuming only one premium is paid. Proof your statement. (Students: {\bf LV}).
+\item Which equivalence principle is fulfilled for the second premium assuming only one premium is paid. Proof your statement. (Students: {\bf LV}).
+\item What is a risk minimising investment strategy for this type of risk. To do so consider the what would happen to the present value of benefits in case interest rates move at time $t=1$ considering two cases a) We consider all cash flows disallowing for the optionality of premium free option; b) allowing for premium free option and the respective cash flows (Students: {\bf Selected Chapter}):
+\begin{itemize}
+\item Calculate the cash flows for both option a) and b) and see what happens if interest rates move $\pm 1\%$ starting from $i_t=2\%$
+\item Calculate the risk minimising portfolios for each premium paid. In the following form (example age 85; $\mathcal{Z}_{x}$ denotes the zero coupon bond at time x starting with $x=0$ at age $80$):
+\begin{center}
+{\bf Premium paid at age 85} \\ 
+\begin{tabular}{ccrrrrr}
+Age & Unit & Units for & Units for & Total & Value & Value \\
+ &  & Mortality & Premium& Units & $i = 2\%$ & $i = 4\%$ \\[1ex] 
+85 & $\mathcal{Z}_{5^+}$ &    xxx &  xxx & xxx &  xxx & xxx \\
+85 & $\mathcal{Z}_{6^-}$ &   xxx &     xxx &   xxx&   xxx &   xxx \\
+\dots & &&&&& \\
+89 & $\mathcal{Z}_{10^-}$ &    xxx&     xxx &   xxx &    xxx &    xxx \\
+90 & $\mathcal{Z}_{10^+}$ &   xxx &     xxx &   xxx &   xxx &   xxx \\
+{\bf Total} &  &  &  &  & {\bf      xxx} & {\bf   xxx} \\
+\end{tabular}
+\end{center}
+\item Show your working as a graphic.
+\end{itemize}
+\item Consider the difference between the Present values (at interest rates 2\% and 4\%) of the table ({\bf for the first premium only! -- this number is somwhere between $\in [-3000,3000]$; in case you can not calculate it, or it is outside this range, take $1000$.}) above as amount of money to be invested for future policyholder participates, which invests (like in a variable annuity) in a equity and a put option to ensure that the fund never falls below its initial value (similar example is in the script). Calculate the respective replicating portfolios (assume market rate $4\%$ and volatility $\sigma=18\%$). The following working are expected: (Students: {\bf LV})
+\begin{itemize}
+\item Calculation of the replicating portfolio - ie you need to enlarge the table above for additional instruments $\mathcal{S}$: shares, and $\mathcal{P}_k$: put options with term $k$. Which strike.
+\item For the calculation of the replicating portfolio what is the condition of the value.
+\item Calculate the value of the replicating portfolio (including guarantees $\mathcal{Z}_{x}$ for the following scenarios: a) $i=4\%, \xi = 1$, where $\xi =1$ is current equity level, b) a) $i=3\%, \xi = 1$, c)  $i=4\%, \xi = 0.9$ (ie equities fall 10\%), a) $i=3\%, \xi = 0.9$
+\item Can you calculate the Greeks for a) $i=4\%, \xi = 1$?
+\end{itemize}
+\end{enumerate}
+
+{\bf Note: the above results can be presented in graphics}
+
+\subsection{Task 3: AHV:}
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  \textbf{all:} Define a Markov Model based on semi-annual time steps
+  for the anticipated and deferred annuitisation of AHV.
+\item
+  \textbf{Only Life Insurance Mathematics:} How do you tranform the
+  annual incidence years to seminannual, and how do you model annuities
+  paid 12x a year in this context. Can this type of insuance be solved
+  by means of tradiditional life insurance mathematics (ie using
+  commutation formular) - if possible provide the respective formuli;
+  otherwise proof why not.
+\item
+  \textbf{all:} Calculate the respective Reserves for a man aged 62.
+  Which is the most valuable returement age (assuming that there is no
+  premium to be paid)? Please anser this question assuming there is a
+  reduction in mortality as opposed to a constant mortality rate. For
+  all following tasks assume teh mortality model including a reduction
+  in mortality. For each set of assumption present the respective
+  reserves in form of a table split into its components.
+\item
+  \textbf{Only Life Insurance Mathematics:} In order to determine
+  whether which age is the best deal for a retirement age, one needs to
+  also consider the contributions paid. The aim of this task is to do
+  this. We assume a person starts paying at age 20 a premium, such which
+  fulfils the equivalence principle assuming an ordinary retirement at
+  age 65. (Note the premium needs to cover also the deferred widdows
+  pensions and we assume that the man is already married at age 20). The
+  Premium is unchanged for differing retirement ages in terms of size,
+  but is paid until the chosen retirement age. Question d.1) what is
+  this premium, Question d.2) which is the most favorable retirementent
+  age (you can look at the mathematical reserves for the differnt stages
+  at age 20)? Show the reserves and the premium at age 20 split into its
+  various components for the different retirement ages.
+\item
+  \textbf{Selected Chapters only:} Calculate the corresponding expected
+  cash flows given one knows at which age a person will retire. Please
+  present them as a replicating profolio in terms of zero coupon bonds
+  (\(\mathcal{Z}_n\))
+\item
+  \textbf{Selected Chapters only:} Consider now a given ex ante
+  distribution of retirement ages and calculate the expected reserves
+  and cash flows assuming a man aged 62; cash flows also represented as
+  zero coupon bonds.
+\item
+  \textbf{Selected Chapters only:} Assume the asset allocation by means
+  of zero coupon bonds is as per f). Which retirement age poses the
+  biggest ALM risk against this asset allocation. We assume that the ALM
+  risk is the maximum absolute difference of the ALM mismatch as a
+  present value if interest rates move either 1\% up or 1\% down
+\item
+  \textbf{all:} Discuss your findings and explain which asset allocation
+  you would choose and why
+\end{enumerate}
+
+\textbf{Remarks}
+
+\begin{itemize}
+\item
+  We assume that the prinicpal receiver of the annuity is a male and
+  there are two cases to consider, namely that the man is single or
+  married. In the second case we assume that the spouse is 3 years
+  younger.
+\item
+  We assume that the yearly annuity (for an ordinary retirement age of
+  65) is CHF 24'000 in both cases and that the deferred widdows pension
+  is 80\% of the annuity.
+\item
+  We choose a technical interest rate (flat yield curve) of 2\% and
+  assume that the market interest rate is 2\% (also flat yield curve)
+\item
+  The reference annuity is either reduced (in case of an anticipated
+  retirement) or increased in case of a deferred retirment. The
+  detailled changes are per appendix. Please note that the deferred
+  widows pension is not changed if the (main) annuity is called earlier
+  or later.
+\item
+  Note that the maximal anticipated annuity is at age \(65-2=63\) and
+  maxium deferral is up to age \(65+5=70\). In the text the
+  corresponding increases and decreases are given for each indiviual
+  month (eg retirening at 63 years and 4 months. To keep the complexity
+  of the model down we \emph{assume} that refirement can take place all
+  6 months, ie at ages 63y0m, 63y6m, \ldots{} ,65y0m, 65y6m, \ldots{} ,
+  69y6m, 70y0m.
+\item
+  For the distribution of the retirement age please use the following
+  table. Note that you need to transform this abolute table into
+  transition probabilities. Please explain how you do this.
+\end{itemize}
+\begin{center}
+\begin{tabular}{cc|p{2cm}|p{2cm}|p{2cm}}
+year & month & retiring & cum. retiring & change in annuity \\ \hline
+63 & 0 & 0.025 & 0.025 & -0.136 \\
+63 & 6 & 0.025 & 0.050 & -0.102 \\
+64 & 0 & 0.025 & 0.075 & -0.068 \\
+64 & 6 & 0.025 & 0.100 & -0.034 \\
+65 & 0 & 0.873 & 0.973 & 0.000 \\
+65 & 6 & 0.000 & 0.973 & 0.000 \\
+66 & 0 & 0.003 & 0.976 & 0.052 \\
+66 & 6 & 0.003 & 0.979 & 0.080 \\
+67 & 0 & 0.003 & 0.982 & 0.108 \\
+67 & 6 & 0.003 & 0.985 & 0.139 \\
+68 & 0 & 0.003 & 0.988 & 0.171 \\
+68 & 6 & 0.003 & 0.991 & 0.205 \\
+69 & 0 & 0.003 & 0.994 & 0.240 \\
+69 & 6 & 0.003 & 0.997 & 0.277 \\
+70 & 0 & 0.003 & 1.000 & 0.315 
+\end{tabular}
+\end{center}
+
+\textbf{Modelling Assumptions to be taken} - Markov Models based on semi
+annual time steps - Mortality as per below - Annuities payable 12x a
+year (ie for the main annuity 2000 per Month) prenummerando - Calendar
+Year 2025 - Male has gender 0 and female gender 1
+
+\begin{verbatim}
+def Qx(gender,x,t,param =[]):
+    # This is our default mortality
+    if gender == 0:
+        a =[2.34544649e+01,8.70547812e-02,7.50884047e-05,-1.67917935e-02]
+    else:
+        a =[2.66163571e+01,8.60317509e-02,2.56738012e-04,-1.91632675e-02]
+    return(np.exp(a[0]+(a[1]+a[2]*x)*x+a[3]*t))
+\end{verbatim}
+{\bf Note we set $t=2025$ for all ages to ensure comparable results!}
+  
+
+%==============ENDMUT
+
+
+\newpage
+\begin{appendix}
+\section{Student Guide} \label{SG}
+\includepdf[pages=-, pagecommand={\thispagestyle{fancy}}, width=0.70\textheight]{./StudentGuide.pdf}
+%\section{Covid Data} \label{CovD}
+%\includepdf[pages=-3, pagecommand={\thispagestyle{fancy}}, width=0.70\textheight]{./CHCovid.pdf}
+\section{AHV Law}
+\includepdf[pages=-, pagecommand={\thispagestyle{fancy}}, width=0.70\textheight]{./../Documents/fedlex-data-admin-ch-eli-cc-63-837_843_843-20250101-de-pdf-a-13.pdf}
+
+\section{AHV Flexible Retirement}
+\includepdf[pages=-, pagecommand={\thispagestyle{fancy}}, width=0.70\textheight]{./../Documents/3_04_d.pdf}
+%\section{Additional Q\&A re tasks}
+
+\section{AHV Statistics}
+\includepdf[pages=-, pagecommand={\thispagestyle{fancy}}, width=0.70\textheight]{./../Documents/AHV-Statistik2022.pdf}
+\end{appendix}
+\end{document}
