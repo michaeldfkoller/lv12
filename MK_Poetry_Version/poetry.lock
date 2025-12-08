@@ -633,6 +633,24 @@ files = [
 ]
 
 [[package]]
+name = "deepl"
+version = "1.25.0"
+description = "Python library for the DeepL API."
+optional = false
+python-versions = "<4,>=3.9"
+groups = ["main"]
+files = [
+    {file = "deepl-1.25.0-py3-none-any.whl", hash = "sha256:071f929a1b80252f16922e84748f7635db110746cada00b2cf2de7d2080cbbcf"},
+    {file = "deepl-1.25.0.tar.gz", hash = "sha256:9c5be635056e83a7334840a8adecfd962c5cb85579f21b15c10643e9d77c238a"},
+]
+
+[package.dependencies]
+requests = ">=2.32.4"
+
+[package.extras]
+keyring = ["keyring (>=23.4.1,<24.0.0)"]
+
+[[package]]
 name = "et-xmlfile"
 version = "2.0.0"
 description = "An implementation of lxml.xmlfile for the standard library"
@@ -1443,6 +1461,33 @@ MarkupSafe = ">=0.9.2"
 babel = ["Babel"]
 lingua = ["lingua"]
 testing = ["pytest"]
+
+[[package]]
+name = "markovlv"
+version = "2.5.0"
+description = "Markov chain library with SWIG bindings"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "markovlv-2.5.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:74393d01aae5ad85086aa2999a40b337b023a20ff5357fe932a9274cbf8e45d1"},
+    {file = "markovlv-2.5.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:01c35eb24a9c48cdd344e0309b0d569b74468d452b97593becea9a4ecbd95e9b"},
+    {file = "markovlv-2.5.0-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:54800d7631eb259737729656fd0f5fc97ae6e48b68911e2559eb3d3cd7870fbc"},
+    {file = "markovlv-2.5.0-cp310-cp310-win_amd64.whl", hash = "sha256:712ab9687b71ba2dde347473d7e51aec3e6bc8267104ff80a3fb6c813f0c204c"},
+    {file = "markovlv-2.5.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:d8575ef23e8f9ffc47163f95a620ce53d7f1cba3148113d414bb6e6a011cd2c5"},
+    {file = "markovlv-2.5.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:5f96ba1248d54a56a5d50874fd079d9a3e13b77914a1ca367a576cbcf52b12f7"},
+    {file = "markovlv-2.5.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:d0c92901774c5bbeba9be4104e27c83275a5d9b199ed46e66caabbc1d034d8bd"},
+    {file = "markovlv-2.5.0-cp311-cp311-win_amd64.whl", hash = "sha256:3498078875407e136971a4151a3fa1add344f398550e37ef0fc77b0b9be1ca2a"},
+    {file = "markovlv-2.5.0-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:fca44a17b62ece16a7d02322a3bb4bc8251c4b231ff88c4fd4125547d8eff1c5"},
+    {file = "markovlv-2.5.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:48e1298d9ce836031d118064c11bba30e81ba8635b486d086d80465779678c9a"},
+    {file = "markovlv-2.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:db09f80bc81febec631e26d08c833bacc54bc73e892d9de5907720324401662b"},
+    {file = "markovlv-2.5.0-cp312-cp312-win_amd64.whl", hash = "sha256:65ceddc125213ee1134aa564574979bbf7d1c92a53bdb75ca7c1855cfe066d8a"},
+    {file = "markovlv-2.5.0-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:bc69b1b417afdb7156ac978989319ed21e2b769070a72470db35ad5e5dc453f8"},
+    {file = "markovlv-2.5.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:988c8fc01161dbc2b262da29596f2286529baab354d0e6e48b3cf4eac373df9a"},
+    {file = "markovlv-2.5.0-cp313-cp313-macosx_15_0_arm64.whl", hash = "sha256:f2b2eda382fd82925e86bf86b1a115229c57644c5469f3069760793547ebbb6c"},
+    {file = "markovlv-2.5.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl", hash = "sha256:8de037e0bf54b536ca6b47e6ad7334511c379c526b0187c4690149fcc2d9737e"},
+    {file = "markovlv-2.5.0-cp313-cp313-win_amd64.whl", hash = "sha256:26493eed795f9d9820013c432a12ebc3e397d4230ad7a535b3ecb1c2b01ea6b4"},
+]
 
 [[package]]
 name = "markupsafe"
@@ -3470,5 +3515,5 @@ repair = ["scipy (>=1.6.3)"]
 
 [metadata]
 lock-version = "2.1"
-python-versions = ">=3.13"
-content-hash = "5f0a7546474305afac59b6fa245eecfb0aaf582fd5df9141ce1fb4943b27f780"
+python-versions = ">=3.13,<4"
+content-hash = "ee73a5017152ec0ce39831c3499384afa03602c51b8bf9383924e6781b822f8d"
